@@ -1,2 +1,2 @@
-web: gunicorn mysite_1.wsgi --log-file -
+web: gunicorn mysite_1.wsgi 
 heroku ps:scale web=1
