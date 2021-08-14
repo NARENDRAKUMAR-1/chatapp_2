@@ -1,0 +1,80 @@
+<!-- chat/templates/chat/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Chat Rooms</title>
+</head>
+
+<style>
+    body {
+  background-color: gray;
+}
+
+.container{
+    
+     width: 100%;
+     background: #c9a9f5;
+     border-radius: 100px;
+     text-align: center;
+     padding: 150px 50px;
+     /* scroll-padding: 15px; */
+
+}
+
+input[type=button]{
+  background-color: #45a049;
+  /* size: 50px; */
+
+  width: 10%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=text]{
+    width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+</style>
+
+
+<body>
+    <h1 style="text-align: center; background-color: greenyellow; border-radius: 50px;">Please Enter your secret room code to start the communication! </h1> <br>
+
+    <div class="container">
+        
+                            <input id="room-name-input" placeholder="Be carefull" type="text" size="100"><br>
+                            <input id="room-name-submit" type="button" value="Enter">
+                  
+     </div>
+
+    <!-- <input id="room-name-input" type="text" size="100"><br>
+    <input id="room-name-submit" type="button" value="Enter"> -->
+
+    <script>
+        document.querySelector('#room-name-input').focus();
+        document.querySelector('#room-name-input').onkeyup = function(e) {
+            if (e.keyCode === 13) {  // enter, return
+                document.querySelector('#room-name-submit').click();
+            }
+        };
+
+        document.querySelector('#room-name-submit').onclick = function(e) {
+            var roomName = document.querySelector('#room-name-input').value;
+            window.location.pathname = '/chat_1/' + roomName + '/';
+            // mention the pathname with care
+        };
+    </script>
+</body>
+</html>
