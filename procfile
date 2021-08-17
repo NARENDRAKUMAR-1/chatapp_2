@@ -1,2 +1,3 @@
+daphne -p 8001 myproject.asgi:application
 web gunicorn mysite_1.wsgi 
 heroku ps:scale web=1
