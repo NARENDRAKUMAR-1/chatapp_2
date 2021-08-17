@@ -25,8 +25,9 @@ SECRET_KEY = 'django-insecure-&@gmp+x4qar&-zzr$-y+#u-aga%p@y7hov0khqhe0no^xqbgv-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".herokuapp.com", "127.0.0.1", "127.0.0.1:8000"]
+ALLOWED_HOSTS = [".herokuapp.com/chat_1"]
 
+# , "127.0.0.1", "127.0.0.1:8000"
 
 # Application definition
 
