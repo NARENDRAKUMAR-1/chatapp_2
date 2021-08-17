@@ -140,7 +140,7 @@ ASGI_APPLICATION = 'mysite_1.asgi.application'
 
 
 # Channels
-ASGI_APPLICATION = 'mysite_1.asgi.application'
+# ASGI_APPLICATION = 'mysite_1.asgi.application'
 
 
 # note mysite_1
