@@ -1,3 +1,4 @@
-daphne -p 8001 myproject.asgi:application
+daphne -p 8001 mysite_1.asgi:application
+worker: python manage.py runworker channels --settings=mysite_1.settings -v2
 web gunicorn mysite_1.wsgi 
 heroku ps:scale web=1
